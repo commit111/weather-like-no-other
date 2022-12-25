@@ -20,13 +20,10 @@ body{
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-.location{
-  background: blue;
+  margin-bottom: 5vh; /*added as extra*/
 }
 .temperature{
   flex-direction: column;
-  .background: 
 }
 .degree-section{
   display: flex;
