@@ -20,19 +20,24 @@ window.addEventListener("load", () => {
           return response.json();
         })
         .then((data) => {
-          //console.log(data);
-          const { temp, conditions } = data.currentConditions;
+          console.log(data);
+          const { temp, conditions, icon } = data.currentConditions;
           // Set DOM elements from the API
           temperatureDegree.textContent = temp;
           temperatureDescription.textContent = conditions;
           locationTimezone.textContent = data.timezone;
+        
+          //Set icon
+          setIcons(icon,document.querySelector(".icon"))
+        
         });
     });
   }
   
   
   function setIcons(icon, iconID){
-    
+    const 
+    return 
   }
   
 });
