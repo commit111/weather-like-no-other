@@ -14,9 +14,29 @@ body{
   font-family: "Bellota Text", sans-serif;
   color: white;
 }
-.location{
+.location, .temperature{
   height: 30vh;
   width: 50%;
-  disp=lay: flex;
+  display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.location{
+  background: blue;
+}
+.temperature{
+  flex-direction: column;
+  .background: 
+}
+.degree-section{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.degree-section span{
+  margin: 0.6rem;
+  font-size: 2rem;
+}
+.degree-section h2{
+  font-size: 3rem;
 }
