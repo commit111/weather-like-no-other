@@ -11,6 +11,16 @@ window.addEventListener("load", () => {
   
   let img = document.querySelector("#dude");
   
+  let clearday = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
+  let clearnight = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night.svg?v=1671944522623";
+  let partlycloudyday = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/partly-cloudy-day.svg?v=1671944525795";
+  let partlycloudynight = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/partly-cloudy-night.svg?v=1671944529178";
+  let cloudy = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy.svg?v=1671944541034";
+  let rain = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/rain.svg?v=1671944547114";
+  let snow = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/snow.svg?v=1671944555717";
+  let wind = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind.svg?v=1671944551944";
+  let fog = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
+  
   /*
   tempSection.addEventListener('click', () => {
             if (tempSpan.textContent === 'F°') {
@@ -56,7 +66,7 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          img.src = setIcons(icon);
+          img.setAttribute("src", setIcons(icon));
         
         });
     });
@@ -65,6 +75,7 @@ window.addEventListener("load", () => {
   function setIcons(icon) {
     let currentIcon = (icon) => {
       switch (icon) {
+          /*
         case "clear-day":
           return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
         case "clear-night":
@@ -85,6 +96,28 @@ window.addEventListener("load", () => {
           return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
         default:
           return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
+          */
+          
+        case "clear-day":
+          return clearday;
+        case "clear-night":
+          return clearnight;
+        case "partly-cloudy-day":
+          return partlycloudyday;
+        case "partly-cloudy-night":
+          return partlycloudynight;
+        case "cloudy":
+          return cloudy;
+        case "rain":
+          return rain;
+        case "snow":
+          return snow;
+        case "wind":
+          return wind;
+        case "fog":
+          return fog;
+        default:
+          return clearday;
       }
     };
   }
