@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
   let temperatureSection = document.querySelector(".temperature-section");
   let temperatureSpan = document.querySelector(".temperature-section span");
   
-  let img = document.querySelector("#dude");
+  //let img = document.querySelector("#dude");
   
   let clearday = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
   let clearnight = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night.svg?v=1671944522623";
@@ -66,12 +66,12 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          img.setAttribute("src", setIcons(icon));
+          //img.setAttribute("src", setIcons(icon));
         
         });
     });
   }
-
+/*
   function setIcons(icon) {
     let currentIcon = (icon) => {
       switch (icon) {
@@ -96,7 +96,7 @@ window.addEventListener("load", () => {
           return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
         default:
           return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
-          */
+          
           
         case "clear-day":
           return clearday;
@@ -118,7 +118,7 @@ window.addEventListener("load", () => {
           return fog;
         default:
           return clearday;
-      }
+      } 
     };
-  }
+  } */
 });
