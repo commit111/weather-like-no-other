@@ -6,6 +6,26 @@ window.addEventListener("load", () => {
   );
   let temperatureDegree = document.querySelector(".temperature-degree");
   let locationTimezone = document.querySelector(".location-timezone");
+  let tempSection = document.querySelector(".temperature")
+  let tempSpan = document.querySelector(".temperature span")
+  
+  tempSection.addEventListener("click", () => {
+    if(tempSpan.textContent === "F°"){
+      tempSpan.textContent = "C";
+      temperatureDegree.textContent = Number((celsius).toFixed(2));
+    }else{
+      tempSpan
+    }
+  })
+  
+  tempSection.addEventListener('click', () => {
+            if (tempSpan.textContent === 'F°') {
+              tempSpan.textContent = 'C°';
+              tempeDegree.textContent = Number((celsius).toFixed(2));
+            } else {
+              tempSpan.textContent = 'F°';
+              tempeDegree.textContent = temperature;
+            }
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
