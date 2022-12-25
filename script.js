@@ -41,10 +41,8 @@ window.addEventListener("load", () => {
           temperatureDegree.textContent = celsius;
           temperatureDescription.textContent = conditions;
           locationTimezone.textContent = data.timezone;
-
-          //Set icon
-          /*setIcons(icon,document.querySelector(".icon"))*/
-
+          
+          //Set to switch between C and F on click
           temperatureSection.addEventListener("click", () => {
             if (temperatureSpan.textContent === "F°") {
               temperatureSpan.textContent = "C°";
@@ -54,6 +52,10 @@ window.addEventListener("load", () => {
               temperatureDegree.textContent = temp;
             }
           });
+        
+          //Set icon
+          /*setIcons(icon,document.querySelector(".icon"))*/
+        
         });
     });
   }
