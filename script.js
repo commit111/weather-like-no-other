@@ -6,11 +6,9 @@ window.addEventListener("load", () => {
   );
   let temperatureDegree = document.querySelector(".temperature-degree");
   let locationTimezone = document.querySelector(".location-timezone");
-  let temperatureSection = document.querySelector(".temperature-section")
-  let temperatureSpan = document.querySelector(".temperature-section span")
-  
-  
- 
+  let temperatureSection = document.querySelector(".temperature-section");
+  let temperatureSpan = document.querySelector(".temperature-section span");
+
   /*
   tempSection.addEventListener('click', () => {
             if (tempSpan.textContent === 'F°') {
@@ -28,7 +26,7 @@ window.addEventListener("load", () => {
       lat = position.coords.latitude;
 
       const api = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat},${long}?key=4MHU9N92TYVGPA9JNANU6MQYQ&contentType=json`;
-      
+
       fetch(api)
         .then((response) => {
           return response.json();
@@ -37,32 +35,31 @@ window.addEventListener("load", () => {
           console.log(data);
           const { temp, conditions, icon } = data.currentConditions;
           // Set DOM elements from the API
-          temperatureDegree.textContent = temp;
+        
+          let celsius = Number(((temp - 32) * 5) / 9).toFixed(1);
+        
+          temperatureDegree.textContent = celsius;
           temperatureDescription.textContent = conditions;
           locationTimezone.textContent = data.timezone;
-          let celsius = (temp - 32) * 5 / 9;
-          
+
           //Set icon
           /*setIcons(icon,document.querySelector(".icon"))*/
-        
-        
-           temperatureSection.addEventListener("click", () => {
-    if(temperatureSpan.textContent === "F°"){
-      temperatureSpan.textContent = "C°";
-      temperatureDegree.textContent = Number((celsius).toFixed(2));
-    }else{
-      temperatureSpan.textContent = "F°";
-      temperatureDegree.textContent = temp;
-    }
-  }); 
-        
+
+          temperatureSection.addEventListener("click", () => {
+            if (temperatureSpan.textContent === "F°") {
+              temperatureSpan.textContent = "C°";
+              temperatureDegree.textContent = celsius;
+            } else {
+              temperatureSpan.textContent = "F°";
+              temperatureDegree.textContent = temp;
+            }
+          });
         });
     });
   }
-  
+
   /*
   function setIcons(icon, iconID){
    
   }*/
-  
 });
