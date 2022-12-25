@@ -6,18 +6,12 @@ window.addEventListener("load", () => {
   );
   let temperatureDegree = document.querySelector(".temperature-degree");
   let locationTimezone = document.querySelector(".location-timezone");
-  let tempSection = document.querySelector(".temperature")
-  let tempSpan = document.querySelector(".temperature span")
+  let temperatureSection = document.querySelector(".temperature-section")
+  let temperatureSpan = document.querySelector(".temperature-section span")
   
-  tempSection.addEventListener("click", () => {
-    if(tempSpan.textContent === "F°"){
-      tempSpan.textContent = "C";
-      temperatureDegree.textContent = Number((celsius).toFixed(2));
-    }else{
-      tempSpan
-    }
-  })
   
+ 
+  /*
   tempSection.addEventListener('click', () => {
             if (tempSpan.textContent === 'F°') {
               tempSpan.textContent = 'C°';
@@ -25,7 +19,7 @@ window.addEventListener("load", () => {
             } else {
               tempSpan.textContent = 'F°';
               tempeDegree.textContent = temperature;
-            }
+            }*/
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -46,18 +40,29 @@ window.addEventListener("load", () => {
           temperatureDegree.textContent = temp;
           temperatureDescription.textContent = conditions;
           locationTimezone.textContent = data.timezone;
-        
+          let celsius = (temp - 32) * 5 / 9;
+          
           //Set icon
-          setIcons(icon,document.querySelector(".icon"))
+          /*setIcons(icon,document.querySelector(".icon"))*/
+        
+        
+           temperatureSection.addEventListener("click", () => {
+    if(temperatureSpan.textContent === "F°"){
+      temperatureSpan.textContent = "C°";
+      temperatureDegree.textContent = Number((celsius).toFixed(2));
+    }else{
+      temperatureSpan.textContent = "F°";
+      temperatureDegree.textContent = temp;
+    }
+  }); 
         
         });
     });
   }
   
-  
+  /*
   function setIcons(icon, iconID){
-    const 
-    return 
-  }
+   
+  }*/
   
 });
