@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
   let temperatureSection = document.querySelector(".temperature-section");
   let temperatureSpan = document.querySelector(".temperature-section span");
   
-  let img = document.getElementById("locimg")
+  let img = document.querySelector("#dude");
   
   /*
   tempSection.addEventListener('click', () => {
@@ -56,13 +56,14 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          /*img.src = setIcons(icon,document.querySelector(".icon"))*/
+          img.src = setIcons(icon);
+        
         });
     });
   }
 
-  function setIcons(icon, iconID) {
-    const currentIcon = (icon) => {
+  function setIcons(icon) {
+    let currentIcon = (icon) => {
       switch (icon) {
         case "clear-day":
           return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
@@ -75,15 +76,15 @@ window.addEventListener("load", () => {
         case "cloudy":
           return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy.svg?v=1671944541034";
         case "rain":
-          return "RAIN";
+          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/rain.svg?v=1671944547114";
         case "snow":
-          return "SNOW";
+          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/snow.svg?v=1671944555717";
         case "wind":
-          return "WIND";
+          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind.svg?v=1671944551944";
         case "fog":
-          return "FOG";
+          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
         default:
-          return 1;
+          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
       }
     };
   }
