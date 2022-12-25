@@ -10,5 +10,13 @@ body{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rbga())
+  background: linear-gradient(rgba(22,185,177),rgba(191,91,91));
+  font-family: "Bellota Text", sans-serif;
+  color: white;
+}
+.location{
+  height: 30vh;
+  width: 50%;
+  disp=lay: flex;
+  justify-content: space-around;
 }
