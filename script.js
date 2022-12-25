@@ -26,8 +26,13 @@ window.addEventListener("load", () => {
           temperatureDegree.textContent = temp;
           temperatureDescription.textContent = conditions;
           locationTimezone.textContent = data.timezone;
-        
         });
     });
   }
+  
+  
+  function setIcons(icon, iconID){
+    
+  }
+  
 });
