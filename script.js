@@ -21,7 +21,12 @@ window.addEventListener("load", () => {
   let snow = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/snow.svg?v=1671944555717";
   let wind = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind.svg?v=1671944551944";
   let fog = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
-
+  
+  modeSection.addEventListener("click", () => {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  });
+  
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       //console.log(position);
@@ -112,8 +117,5 @@ window.addEventListener("load", () => {
       } 
     };
   } */
-  function darkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  }
+
 });
