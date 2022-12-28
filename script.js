@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
   let locationTimezone = document.querySelector(".location-timezone");
   let temperatureSection = document.querySelector(".temperature-section");
   let temperatureSpan = document.querySelector(".temperature-section span");
+  let modeSection = document.querySelector(".mode")
   
   let img = document.querySelector("#dude");
   
