@@ -49,7 +49,10 @@ img{
 .mode{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
+  background: green;
+  width: 66%;
+  margin-top: 5%;
 }
 .mode img{
   transform: rotate(270deg);
