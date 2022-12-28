@@ -40,7 +40,10 @@ body{
 }
 .temperature-description{
   font-size: 1.5rem;
+  flex-direction: row;
 }
+
+
 img{
   margin-left: 10%;
 }
