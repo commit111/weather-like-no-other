@@ -40,15 +40,17 @@ body{
 }
 .temperature-description{
   font-size: 1.5rem;
-  display: flex;
-  flex-direction: row;
-  background: green;
-}
-
-.mode img{
-  transform: rotate(270deg);
 }
 
 img{
   margin-left: 10%;
+}
+
+.mode{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.mode img{
+  transform: rotate(270deg);
 }
