@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
   let temperatureSpan = document.querySelector(".temperature-section span");
   let modeSection = document.querySelector(".mode")
   
-  let img = document.querySelector("#dude");
+  let imgcloud = document.querySelector("#dude");
   
   let clearday = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
   let clearnight = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night.svg?v=1671944522623";
@@ -21,6 +21,7 @@ window.addEventListener("load", () => {
   let snow = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/snow.svg?v=1671944555717";
   let wind = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind.svg?v=1671944551944";
   let fog = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
+  let cloudywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy_white.svg?v=1696177497096";
   
   modeSection.addEventListener("click", () => {
     var element = document.body;
@@ -62,7 +63,7 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          //img.setAttribute("src", setIcons(icon));
+          //imgcloud.setAttribute("src", cloudywhite);
         
         });
     });
