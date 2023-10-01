@@ -27,7 +27,6 @@ window.addEventListener("load", () => {
   let clearnightwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night-white.svg?v=1696178727505";
   
   let oldIcon = "";
-  let currentIcon = "";
   
   modeSection.addEventListener("click", () => {
     var element = document.body;
@@ -84,15 +83,31 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          imgcloud.setIconStatus();
+          
+          if (icon !== oldIcon){
+            if (imgcloud.classList.contains(oldIcon)){
+              imgcloud.classList.remove(oldIcon);
+            }
+            imgcloud.classList.add(icon);
+            oldIcon = icon;
+          }
           setIconImage();
+          oldIcon = icon;
         
         });
     });
   }
+    
   
 function setIconImage() {
-  
+  if (imgcloud.classList.contains("partly-cloudy-day")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", partlycloudyday);
+    }
+  }
+  /*
   if (imgcloud.classList.contains("clear-day")){
     if (imgcloud.classList.contains("dark-mode-weather")){
       imgcloud.setAttribute("src", cloudywhite);
@@ -149,6 +164,7 @@ function setIconImage() {
       imgcloud.setAttribute("src", fog);
     }
   }
+  */
   
   else{
     imgcloud.setAttribute("src", cloudy);
