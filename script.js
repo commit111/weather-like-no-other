@@ -131,6 +131,13 @@ function setIconImage() {
       imgcloud.setAttribute("src", partlycloudynight);
     }
   }
+  else if (imgcloud.classList.contains("cloudy")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", cloudy);
+    }
+  }
   else if (imgcloud.classList.contains("rain")){
     if (imgcloud.classList.contains("dark-mode-weather")){
       imgcloud.setAttribute("src", rainwhite);

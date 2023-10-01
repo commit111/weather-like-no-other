@@ -14,9 +14,10 @@ body{
   background: linear-gradient(rgba(174, 234, 229),rgba(238, 214, 199));
   font-family: "Bellota Text", sans-serif;
   color: black;
+  overflow: hidden;
 }
 .dark-mode{
-  background: linear-gradient(rgba(22,185,177),rgba(191,91,91)); 
+  background: linear-gradient(rgba(22, 153, 147),rgba(191,91,91)); 
   color: white;
 }
 .location, .temperature{
