@@ -22,6 +22,7 @@ window.addEventListener("load", () => {
   let snow = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/snow.svg?v=1671944555717";
   let wind = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind.svg?v=1671944551944";
   let fog = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
+  
   let cloudywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy_white.svg?v=1696178736145";
   let clearnightwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night-white.svg?v=1696178727505";
   
@@ -79,13 +80,33 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          //imgcloud.classList.add(setIcons(icon));
+          imgcloud.classList.add(icon);
+          setIconImage();
         
         });
     });
   }
+  
+function setIconImage() {
+  if (imgcloud.classList.contains("clear-day")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", clearday);
+    }
+  }
+  else if (imgcloud.classList.contains("clear-night")){
+    imgcloud.setAttribute("src", "");
+  }
+  else{
+    
+  }
+    
+}
+  
+  
 /*
-  function setIcons(icon) {
+  function setIconImage(icon) {
     let currentIcon = (icon) => {
       switch (icon) {
           /*
