@@ -26,17 +26,21 @@ window.addEventListener("load", () => {
   let cloudywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy_white.svg?v=1696178736145";
   let clearnightwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night-white.svg?v=1696178727505";
   
+  let oldIcon = "";
+  let currentIcon = "";
+  
   modeSection.addEventListener("click", () => {
     var element = document.body;
     element.classList.toggle("dark-mode");
     imgcloud.classList.toggle("dark-mode-weather");
     imgcresent.classList.toggle("dark-mode-cresent");
-    
+    /*
     if (imgcloud.classList.contains("dark-mode-weather")){
       imgcloud.setAttribute("src", cloudywhite);
     }else{
       imgcloud.setAttribute("src", cloudy);
-    }
+    }*/
+    setIconImage();
     
     if (imgcresent.classList.contains("dark-mode-cresent")){
       imgcresent.setAttribute("src", clearnightwhite);
@@ -80,7 +84,7 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          imgcloud.classList.add(icon);
+          imgcloud.setIconStatus();
           setIconImage();
         
         });
@@ -88,6 +92,7 @@ window.addEventListener("load", () => {
   }
   
 function setIconImage() {
+  
   if (imgcloud.classList.contains("clear-day")){
     if (imgcloud.classList.contains("dark-mode-weather")){
       imgcloud.setAttribute("src", cloudywhite);
@@ -96,11 +101,59 @@ function setIconImage() {
     }
   }
   else if (imgcloud.classList.contains("clear-night")){
-    imgcloud.setAttribute("src", "");
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", clearnight);
+    }
   }
+  else if (imgcloud.classList.contains("partly-cloudy-day")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", partlycloudyday);
+    }
+  }
+  else if (imgcloud.classList.contains("partly-cloudy-night")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", partlycloudynight);
+    }
+  }
+  else if (imgcloud.classList.contains("rain")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", rain);
+    }
+  }
+  else if (imgcloud.classList.contains("snow")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", snow);
+    }
+  }
+  else if (imgcloud.classList.contains("wind")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", wind);
+    }
+  }
+  else if (imgcloud.classList.contains("fog")){
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", fog);
+    }
+  }
+  
   else{
-    
+    imgcloud.setAttribute("src", cloudy);
   }
+
     
 }
   
