@@ -40,12 +40,7 @@ window.addEventListener("load", () => {
     element.classList.toggle("dark-mode");
     imgcloud.classList.toggle("dark-mode-weather");
     imgcresent.classList.toggle("dark-mode-cresent");
-    /*
-    if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
-    }else{
-      imgcloud.setAttribute("src", cloudy);
-    }*/
+    
     setIconImage();
     
     if (imgcresent.classList.contains("dark-mode-cresent")){
@@ -53,6 +48,7 @@ window.addEventListener("load", () => {
     }else{
       imgcresent.setAttribute("src", clearnight);
     }
+    
   });
   
   if (navigator.geolocation) {
@@ -106,129 +102,66 @@ window.addEventListener("load", () => {
     
   
 function setIconImage() {
-  if (imgcloud.classList.contains("rain")){
-    if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
-    }else{
-      imgcloud.setAttribute("src", rain);
-    }
-  }
-  /*
+  
   if (imgcloud.classList.contains("clear-day")){
     if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
+      imgcloud.setAttribute("src", cleardaywhite);
     }else{
       imgcloud.setAttribute("src", clearday);
     }
   }
   else if (imgcloud.classList.contains("clear-night")){
     if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
+      imgcloud.setAttribute("src", clearnightwhite);
     }else{
       imgcloud.setAttribute("src", clearnight);
     }
   }
   else if (imgcloud.classList.contains("partly-cloudy-day")){
     if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
+      imgcloud.setAttribute("src", partlycloudydaywhite);
     }else{
       imgcloud.setAttribute("src", partlycloudyday);
     }
   }
   else if (imgcloud.classList.contains("partly-cloudy-night")){
     if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
+      imgcloud.setAttribute("src", partlycloudynightwhite);
     }else{
       imgcloud.setAttribute("src", partlycloudynight);
     }
   }
   else if (imgcloud.classList.contains("rain")){
     if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
+      imgcloud.setAttribute("src", rainwhite);
     }else{
       imgcloud.setAttribute("src", rain);
     }
   }
   else if (imgcloud.classList.contains("snow")){
     if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
+      imgcloud.setAttribute("src", snowwhite);
     }else{
       imgcloud.setAttribute("src", snow);
     }
   }
   else if (imgcloud.classList.contains("wind")){
     if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
+      imgcloud.setAttribute("src", windwhite);
     }else{
       imgcloud.setAttribute("src", wind);
     }
   }
   else if (imgcloud.classList.contains("fog")){
     if (imgcloud.classList.contains("dark-mode-weather")){
-      imgcloud.setAttribute("src", cloudywhite);
+      imgcloud.setAttribute("src", fogwhite);
     }else{
       imgcloud.setAttribute("src", fog);
     }
   }
-  */
-  
   else{
     imgcloud.setAttribute("src", cloudy);
   }
-
-    
 }
   
-  
-/*
-  function setIconImage(icon) {
-    let currentIcon = (icon) => {
-      switch (icon) {
-          /*
-        case "clear-day":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
-        case "clear-night":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night.svg?v=1671944522623";
-        case "partly-cloudy-day":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/partly-cloudy-day.svg?v=1671944525795";
-        case "partly-cloudy-night":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/partly-cloudy-night.svg?v=1671944529178";
-        case "cloudy":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy.svg?v=1671944541034";
-        case "rain":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/rain.svg?v=1671944547114";
-        case "snow":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/snow.svg?v=1671944555717";
-        case "wind":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind.svg?v=1671944551944";
-        case "fog":
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
-        default:
-          return "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
-          
-          
-        case "clear-day":
-          return clearday;
-        case "clear-night":
-          return clearnight;
-        case "partly-cloudy-day":
-          return partlycloudyday;
-        case "partly-cloudy-night":
-          return partlycloudynight;
-        case "cloudy":
-          return cloudy;
-        case "rain":
-          return rain;
-        case "snow":
-          return snow;
-        case "wind":
-          return wind;
-        case "fog":
-          return fog;
-        default:
-          return clearday;
-      } 
-    };
-  } */
-
 });
