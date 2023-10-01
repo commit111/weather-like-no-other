@@ -10,7 +10,8 @@ window.addEventListener("load", () => {
   let temperatureSpan = document.querySelector(".temperature-section span");
   let modeSection = document.querySelector(".mode")
   
-  let imgcloud = document.querySelector("#dude");
+  let imgcloud = document.querySelector("#imgweather");
+  let imgcresent = document.querySelector("#cresent");
   
   let clearday = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day.svg?v=1671944510051";
   let clearnight = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night.svg?v=1671944522623";
@@ -26,6 +27,14 @@ window.addEventListener("load", () => {
   modeSection.addEventListener("click", () => {
     var element = document.body;
     element.classList.toggle("dark-mode");
+    imgcloud.classList.toggle("dark-mode-weather");
+    imgcresent.classList.toggle("dark-mode-cresent")
+    
+    if (imgcloud.classList.contains("dark-mode-weather")){
+      imgcloud.setAttribute("src", cloudywhite);
+    }else{
+      imgcloud.setAttribute("src", cloudy);
+    }
   });
   
   if (navigator.geolocation) {
