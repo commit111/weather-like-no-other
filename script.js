@@ -23,10 +23,17 @@ window.addEventListener("load", () => {
   let wind = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind.svg?v=1671944551944";
   let fog = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
   
-  let cloudywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy_white.svg?v=1696178736145";
+  let cleardaywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-day-white.svg?v=1696181634989";
   let clearnightwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night-white.svg?v=1696178727505";
+  let partlycloudydaywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/partly-cloudy-day-white.svg?v=1696181642303";
+  let partlycloudynightwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/partly-cloudy-night-white.svg?v=1696181644883";
+  let cloudywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy_white.svg?v=1696178736145";
+  let rainwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/rain-white.svg?v=1696181647456";
+  let snowwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/snow-white.svg?v=1696181650702";
+  let windwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind-white.svg?v=1696181653822";
+  let fogwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog-white.svg?v=1696181639447";
   
-  let oldIcon = "";
+  let oldIcon = "cloudy";
   
   modeSection.addEventListener("click", () => {
     var element = document.body;
@@ -83,7 +90,6 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          
           if (icon !== oldIcon){
             if (imgcloud.classList.contains(oldIcon)){
               imgcloud.classList.remove(oldIcon);
@@ -100,11 +106,11 @@ window.addEventListener("load", () => {
     
   
 function setIconImage() {
-  if (imgcloud.classList.contains("partly-cloudy-day")){
+  if (imgcloud.classList.contains("rain")){
     if (imgcloud.classList.contains("dark-mode-weather")){
       imgcloud.setAttribute("src", cloudywhite);
     }else{
-      imgcloud.setAttribute("src", partlycloudyday);
+      imgcloud.setAttribute("src", rain);
     }
   }
   /*
