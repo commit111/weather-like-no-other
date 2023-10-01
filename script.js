@@ -22,18 +22,25 @@ window.addEventListener("load", () => {
   let snow = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/snow.svg?v=1671944555717";
   let wind = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/wind.svg?v=1671944551944";
   let fog = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/fog.svg?v=1671944543895";
-  let cloudywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy_white.svg?v=1696177497096";
+  let cloudywhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/cloudy_white.svg?v=1696178736145";
+  let clearnightwhite = "https://cdn.glitch.global/ddf86376-5356-40d5-aea5-6ee7a7dd04dd/clear-night-white.svg?v=1696178727505";
   
   modeSection.addEventListener("click", () => {
     var element = document.body;
     element.classList.toggle("dark-mode");
     imgcloud.classList.toggle("dark-mode-weather");
-    imgcresent.classList.toggle("dark-mode-cresent")
+    imgcresent.classList.toggle("dark-mode-cresent");
     
     if (imgcloud.classList.contains("dark-mode-weather")){
       imgcloud.setAttribute("src", cloudywhite);
     }else{
       imgcloud.setAttribute("src", cloudy);
+    }
+    
+    if (imgcresent.classList.contains("dark-mode-cresent")){
+      imgcresent.setAttribute("src", clearnightwhite);
+    }else{
+      imgcresent.setAttribute("src", clearnight);
     }
   });
   
@@ -72,7 +79,7 @@ window.addEventListener("load", () => {
           });
 
           //Set icon
-          //imgcloud.setAttribute("src", cloudywhite);
+          //imgcloud.classList.add(setIcons(icon));
         
         });
     });
